@@ -25,9 +25,7 @@ class Body extends StatelessWidget {
               OtpForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               GestureDetector(
-                onTap: () {
-                  // OTP code resend
-                },
+                onTap: () {},
                 child: Text(
                   "Resend OTP Code",
                   style: TextStyle(decoration: TextDecoration.underline),

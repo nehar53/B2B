@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:my_shop/screens/cart/cart_screen.dart';
 import 'package:my_shop/screens/complete_profile/complete_profile_screen.dart';
 import 'package:my_shop/screens/details/details_screen.dart';
+import 'package:my_shop/screens/home/components/popular_product.dart';
 
 import 'package:my_shop/screens/home/home_screen.dart';
 
@@ -18,4 +19,5 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
+  PopularProducts1.routeName: (context) => PopularProducts1(),
 };

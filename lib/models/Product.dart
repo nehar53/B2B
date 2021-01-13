@@ -5,7 +5,7 @@ class Product {
   final String title, description;
   final List<String> images;
   final List<Color> colors;
-  final double rating, price;
+  final double rating, price, discount;
   final bool isFavourite, isPopular;
 
   Product({
@@ -13,6 +13,7 @@ class Product {
     @required this.images,
     @required this.colors,
     this.rating = 0.0,
+    this.discount,
     this.isFavourite = false,
     this.isPopular = false,
     @required this.title,
@@ -40,6 +41,7 @@ List<Product> demoProducts = [
     ],
     title: "Wireless Controller for PS4™",
     price: 64.99,
+    discount: 51,
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -58,6 +60,7 @@ List<Product> demoProducts = [
     ],
     title: "Nike Sport White - Man Pant",
     price: 50.5,
+    discount: 31,
     description: description,
     rating: 4.1,
     isPopular: true,
@@ -75,6 +78,7 @@ List<Product> demoProducts = [
     ],
     title: "Gloves XC Omega - Polygon",
     price: 36.55,
+    discount: 45,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -93,6 +97,7 @@ List<Product> demoProducts = [
     ],
     title: "Logitech Head",
     price: 20.20,
+    discount: 65,
     description: description,
     rating: 4.1,
     isFavourite: true,

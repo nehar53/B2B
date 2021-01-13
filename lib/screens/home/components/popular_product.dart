@@ -6,6 +6,7 @@ import '../../../size_config.dart';
 import 'section_title.dart';
 
 class PopularProducts extends StatelessWidget {
+  static String routeName = "/popular_product";
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,6 +26,36 @@ class PopularProducts extends StatelessWidget {
                 (index) {
                   if (demoProducts[index].isPopular)
                     return ProductCard(product: demoProducts[index]);
+
+                  return SizedBox
+                      .shrink(); // here by default width and height is 0
+                },
+              ),
+              SizedBox(width: getProportionateScreenWidth(20)),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class PopularProducts1 extends StatelessWidget {
+  static String routeName;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              ...List.generate(
+                demoProducts.length,
+                (index) {
+                  if (demoProducts[index].isPopular)
+                    return CategoriesCard(product: demoProducts[index]);
 
                   return SizedBox
                       .shrink(); // here by default width and height is 0
